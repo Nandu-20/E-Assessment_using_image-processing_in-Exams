@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">          
+    <title>Performance Graph</title>
+    <style>
+        body { font-family: Arial; background-color: #fafafa; text-align: center; }
+        img { max-width: 90%; border: 1px solid #ccc; border-radius: 10px; margin-top: 20px; }
+        a { text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Student Performance Graph</h1>
+    {% if graph %}
+        <img src="{{ url_for('static', filename='graphs/performance.png') }}" alt="Performance Graph">
+    {% else %}
+        <p>No data available yet.</p>
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a> | <a href="/results">View Results</a>
+</body>
+</html>

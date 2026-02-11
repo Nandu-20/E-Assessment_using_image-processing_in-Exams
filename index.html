@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Assessment System</title>
+    <style>
+        body { font-family: Arial; background-color:pink; text-align: center; padding-top: 50px; }
+        form { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+        input, select { padding: 8px; margin: 5px; width: 200px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>E-Assessment System</h1>
+    <form action="/evaluate" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Enter Name" required><br>
+        <input type="text" name="roll_no" placeholder="Enter Roll Number" required><br>
+        <input type="text" name="semester" placeholder="Enter Semester" required><br>
+        <input type="file" name="file" accept="image/*" required><br>
+        <button type="submit">Upload & Evaluate</button>
+    </form>
+    <br><br>
+    <a href="/results">View Results</a> | 
+    <a href="/graph">View Graph</a>
+</body>
+</html>
